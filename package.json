@@ -1,0 +1,20 @@
+{
+  "name": "vokeeb",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^33.1.0"
+  },
+  "dependencies": {
+    "@google-cloud/speech": "^6.7.0",
+    "keysender": "^2.3.0",
+    "node-record-lpcm16": "^1.0.1"
+  }
+}
