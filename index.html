@@ -5,19 +5,108 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="default-src 'self';
+        script-src 'self';
+        style-src 'self' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;"
     />
     <meta
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
     <title>Vokeeb</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
-    <button id="btn">Click me</button>
-    <p id="info"></p>
-    <br />
-    <input type="text" id="input"/>
+    <div class="container">
+      <!-- input-device -->
+      <select name="input-device">
+        <option value="1">Microphone 1</option>
+        <option value="2">External Mic</option>
+        <option value="3">Dupa psa</option>
+        <option value="4">There can also be one with very long label</option>
+      </select>
+
+      <div class="divider"></div>
+
+      <!-- ai-model -->
+      <input id="google" type="radio" name="ai-model" value="Google" checked />
+      <label for="google" class="radio-button">G</label>
+
+      <input id="web-speech" type="radio" name="ai-model" value="Web Speech" />
+      <label for="web-speech" class="radio-button">W</label>
+
+      <input id="universal-2" type="radio" name="ai-model" value="Universal-2" />
+      <label for="universal-2" class="radio-button">U</label>
+
+      <div class="divider"></div>
+
+      <!-- transcription-mode -->
+      <input id="word" type="radio" name="transcription-mode" value="word" />
+      <label for="word" class="radio-button">
+        <span class="material-symbols-rounded">short_text</span>
+      </label>
+
+      <input id="utterance" type="radio" name="transcription-mode" value="utterance" checked />
+      <label for="utterance" class="radio-button">
+        <span class="material-symbols-rounded">notes</span>
+      </label>
+
+      <input id="dictation" type="radio" name="transcription-mode" value="dictation" />
+      <label for="dictation" class="radio-button">
+        <span class="material-symbols-rounded">format_align_left</span>
+      </label>
+
+      <div class="divider"></div>
+
+      <!-- punctuation -->
+      <input id="punctuation" type="checkbox" />
+      <label for="punctuation" class="toggle-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+          <circle cx="7.5" cy="11.5" r="2.5" fill="#6C6D6E" />
+          <path fill="#6C6D6E" d="M19 11.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+          <path
+            fill="#6C6D6E"
+            d="M19 11.5a2.5 2.5 0 0 1-2.5 2.5c1.014 0-.963 3.288-1.747 4.531a.306.306 0 0 0 .257.469h1.6a.3.3 0 0 0 .283-.202l1.687-4.857c.488-1.152.344-1.509.42-2.441Z"
+          />
+        </svg>
+      </label>
+
+      <!-- talon-integration -->
+      <input id="talon-integration" type="checkbox" checked />
+      <label for="talon-integration" class="toggle-button">T</label>
+
+      <div class="divider"></div>
+
+      <!-- status -->
+      <div>
+        <input id="on" type="radio" name="status" value="on" />
+        <label for="on" class="status-button">
+          <span class="material-symbols-rounded">mic</span>
+        </label>
+
+        <input id="off" type="radio" name="status" value="off" checked />
+        <label for="off" class="status-button">
+          <span class="material-symbols-rounded">mic_off</span>
+        </label>
+
+        <input id="error" type="radio" name="status" value="error" />
+        <label for="error" class="status-button">
+          <span class="material-symbols-rounded">error</span>
+        </label>
+      </div>
+    </div>
   </body>
   <script src="renderer.js"></script>
 </html>

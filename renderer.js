@@ -1,15 +1,15 @@
-const button = document.getElementById('btn')
-const input = document.getElementById('input')
-const info = document.getElementById('info')
+// const button = document.getElementById('btn')
+// const input = document.getElementById('input')
+// const info = document.getElementById('info')
 
-button.addEventListener('click', () => {
-  console.log('Button clicked')
+// button.addEventListener('click', () => {
+//   console.log('Button clicked')
 
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  const recognition = new SpeechRecognition();
-  recognition.continuous = false;
-  recognition.lang = 'en-US';
-  recognition.interimResults = false;
+//   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+//   const recognition = new SpeechRecognition();
+//   recognition.continuous = false;
+//   recognition.lang = 'en-US';
+//   recognition.interimResults = false;
 // recognition.maxAlternatives = 1;
 //   recognition.onresult = (event) => {
 //     const transcript = event.results[0][0].transcript;
@@ -19,14 +19,14 @@ button.addEventListener('click', () => {
 // recognition.start();
 
   // focus on the input field
-  input.focus()
+  // input.focus()
 
   // type the message
-  electronAPI.typeMessage("hello world")
-})
+  // electronAPI.typeMessage("hello world")
+// })
 
 // listen for the update-info-text event
-electronAPI.updateInfoText((value) => {
-  info.innerText = value
-})
+// electronAPI.updateInfoText((value) => {
+//   info.innerText = value
+// })
 
