@@ -6,8 +6,8 @@ const { startSpeechRecognition } = require('./speechRecognition/googleUSM.js');
 let win = null
 const createWindow = () => {
   win = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 800,
+    height: 600,
     webPreferences: {
      preload: path.join(__dirname, 'preload.js'),
    }

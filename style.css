@@ -3,11 +3,11 @@
 }
 
 .container {
-  margin: 32px;
+  /* margin: 32px; */
   padding: 8px;
   border: 1px solid #e1e2e2;
   display: inline-flex;
-  gap: 8px;
+  gap: 4px;
   color: #6c6d6e;
   font-family: "Roboto", sans-serif;
   border-radius: 8px;
@@ -22,7 +22,7 @@
 
 select {
   margin: 0 !important;
-  padding: 10px 32px 10px 10px;
+  padding: 0px 32px 0px 10px;
   margin: 10px 0;
   border: 1px solid #e1e2e2;
   border-radius: 4px;
@@ -30,6 +30,7 @@ select {
   font-family: "Roboto", sans-serif;
   cursor: pointer;
   font-size: 16px;
+  line-height: 16px;
 
   max-width: 160px;
   text-overflow: ellipsis;
@@ -57,12 +58,12 @@ input[type="checkbox"] {
   border: 1px solid #e1e2e2;
   padding: 8px;
   border-radius: 8px;
-  height: 40px;
-  width: 40px;
+  height: 26px;
+  width: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: 14px;
   cursor: pointer;
 }
 .radio-button:hover {
@@ -81,12 +82,12 @@ input[type="radio"]:checked + .radio-button {
   border: 1px solid #e1e2e2;
   padding: 8px;
   border-radius: 8px;
-  height: 40px;
-  width: 40px;
+  height: 26px;
+  width: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: 14px;
   cursor: pointer;
 }
 .toggle-button:hover {
@@ -113,12 +114,12 @@ svg {
 .status-button {
   border-radius: 50%;
   padding: 8px;
-  height: 40px;
-  width: 40px;
+  height: 26px;
+  width: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: 14px;
 }
 .status-button:nth-of-type(1) {
   background-color: #93e08c;
@@ -133,4 +134,7 @@ svg {
 }
 input[type="radio"]:not(:checked) + .status-button {
   display: none;
+}
+.material-symbols-rounded {
+  font-size: 16px !important;
 }
