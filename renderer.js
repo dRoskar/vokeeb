@@ -2,6 +2,22 @@
 // const input = document.getElementById('input')
 // const info = document.getElementById('info')
 
+const btnModelGoogle = document.getElementById('google')
+const btnModelWebSpeech = document.getElementById('web-speech')
+const btnModelUniversal2 = document.getElementById('universal-2')
+
+const btnWord = document.getElementById('word')
+const btnSentence = document.getElementById('sentence')
+const btnDictation = document.getElementById('dictation')
+
+btnSentence.addEventListener('click', () => {
+  vokeebAPI.startListening(getSelectedModel(), 'sentence')
+})
+
+
+function getSelectedModel() {
+  return btnModelGoogle.checked ? 'google' : btnModelWebSpeech.checked ? 'web-speech' : 'universal-2'
+}
 // button.addEventListener('click', () => {
 //   console.log('Button clicked')
 

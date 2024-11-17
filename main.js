@@ -23,14 +23,22 @@ const createWindow = () => {
   win.loadFile('index.html')
 }
 
-async function typeMessage (event, message) {
-  win.webContents.send('update-info-text', "Listening...")
+// async function typeMessage (event, message) {
+//   win.webContents.send('update-info-text', "Listening...")
 
-  startSpeechRecognition('utterance');
+//   // startSpeechRecognition('utterance');
+// }
+
+async function startListening (event, model, mode) {
+  // win.webContents.send('update-info-text', "Listening...")
+
+  console.log('startListening', model, mode)
+  startSpeechRecognition(mode);
 }
 
 app.whenReady().then(() => {
-  ipcMain.on('type-message', typeMessage)
+  // ipcMain.on('type-message', typeMessage)
+  ipcMain.on('start-listening', startListening)
   
   createWindow()
 
