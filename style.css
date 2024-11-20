@@ -78,6 +78,13 @@ input[type="radio"]:checked + .radio-button {
   font-variation-settings: "wght" 600;
 }
 
+input[type="radio"]:disabled + .radio-button {
+  background-color: #f0f0f0;
+  border: 1px solid #d1d1d1;
+  color: #a1a1a1;
+  cursor: not-allowed;
+}
+
 .toggle-button {
   border: 1px solid #e1e2e2;
   padding: 8px;
