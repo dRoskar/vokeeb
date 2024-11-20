@@ -4,16 +4,26 @@
 
 const btnModelGoogle = document.getElementById('google')
 const btnModelWebSpeech = document.getElementById('web-speech')
+btnModelWebSpeech.disabled = true
 const btnModelUniversal2 = document.getElementById('universal-2')
+btnModelUniversal2.disabled = true
 
 const btnWord = document.getElementById('word')
 const btnSentence = document.getElementById('sentence')
 const btnDictation = document.getElementById('dictation')
+btnDictation.disabled = true
+
+btnWord.addEventListener('click', () => {
+  vokeebAPI.startListening(getSelectedModel(), 'word')
+})
 
 btnSentence.addEventListener('click', () => {
   vokeebAPI.startListening(getSelectedModel(), 'sentence')
 })
 
+btnDictation.addEventListener('click', () => {
+  vokeebAPI.startListening(getSelectedModel(), 'dictation')
+})
 
 function getSelectedModel() {
   return btnModelGoogle.checked ? 'google' : btnModelWebSpeech.checked ? 'web-speech' : 'universal-2'
